@@ -1,2 +1,2 @@
 # ProyectoFinalSE
-Este repositorio contiene el codigo necesario para flashear los esp32.
+Este repositorio contiene los archivos para la red de sensores, AP+STA
