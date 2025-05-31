@@ -109,7 +109,7 @@ void monitor_state_task(void *pvParams)
     // wait for wifi conected
     xEventGroupWaitBits(s_wifi_event_group, MY_WIFI_CONNECTED_BIT, pdFALSE, pdFALSE, portMAX_DELAY);
     ESP_LOGI(TAG, "WiFi listo, arrancando polling de /monitor");
-    for (;;)
+    while(1)
     {
         esp_http_client_config_t cfg = {
             .url               = AP_MONITOR_URL,
