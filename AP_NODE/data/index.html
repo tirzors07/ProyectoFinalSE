@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!--meta http-equiv="refresh" content="1"-->
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>ESP32</h1>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li> <a href="#">Home</a></li>
+                    <li><a href="#">About US</a></li>
+                    <li><a href="#">ESP32 LABS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="statusBanner"></div>
+    <div class="content">
+        <div class="form">
+            <form action="/" method="post">
+                <input type="submit" value="Start/Stop">
+            </form>
+            <p>Estado de monitoreo: <strong>%s</strong></p>
+        </div>
+        <div class="contenedor">
+            <h1 class="Nodo1"> Temperatura: <strong>%s</strong>°C</h1>
+            <h1 class="Nodo2">Humedad: <strong>%s</strong> '%' </h1>
+        </div>
+        <!-- historial de 10 estados -->
+        <div class="history">
+            <h2>Últimas 10 Mediciones</h2>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Temp (°C)</th>
+                        <th>Hum ("%")</th>
+                        <th>Nivel Temp</th>
+                        <th>Nivel Hum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- fila 1 -->
+                    <tr>
+                        <td>1</td>
+                        <td class="temp">%s</td>
+                        <td class="hum">%s</td>
+                        <td><meter class="bar-temp" min="0" max="50"></meter></td>
+                        <td><meter class="bar-hum" min="0" max="100"></meter></td>
+                    </tr>
+                    <!-- fila 2 -->
+                    <tr>
+                        <td>2</td>
+                        <td class="temp">%s</td>
+                        <td class="hum">%s</td>
+                        <td><meter class="bar-temp" min="0" max="50"></meter></td>
+                        <td><meter class="bar-hum" min="0" max="100"></meter></td>
+                    </tr>
+                    <!-- fila 3 -->
+                    <tr>
+                        <td>3</td>
+                        <td class="temp">%s</td>
+                        <td class="hum">%s</td>
+                        <td><meter class="bar-temp" min="0" max="50"></meter></td>
+                        <td><meter class="bar-hum" min="0" max="100"></meter></td>
+                    </tr>
+                    <!-- fila 4 -->
+                    <tr>
+                        <td>4</td>
+                        <td class="temp">%s</td>
+                        <td class="hum">%s</td>
+                        <td><meter class="bar-temp" min="0" max="50"></meter></td>
+                        <td><meter class="bar-hum" min="0" max="100"></meter></td>
+                    </tr>
+                    <!-- fila 5 -->
+                    <tr>
+                        <td>5</td>
+                        <td class="temp">%s</td>
+                        <td class="hum">%s</td>
+                        <td><meter class="bar-temp" min="0" max="50"></meter></td>
+                        <td><meter class="bar-hum" min="0" max="100"></meter></td>
+                    </tr>
+                    <!-- fila 6 -->
+                    <tr>
+                        <td>6</td>
+                        <td class="temp">%s</td>
+                        <td class="hum">%s</td>
+                        <td><meter class="bar-temp" min="0" max="50"></meter></td>
+                        <td><meter class="bar-hum" min="0" max="100"></meter></td>
+                    </tr>
+                    <!-- fila 7 -->
+                    <tr>
+                        <td>7</td>
+                        <td class="temp">%s</td>
+                        <td class="hum">%s</td>
+                        <td><meter class="bar-temp" min="0" max="50"></meter></td>
+                        <td><meter class="bar-hum" min="0" max="100"></meter></td>
+                    </tr>
+                    <!-- fila 8 -->
+                    <tr>
+                        <td>8</td>
+                        <td class="temp">%s</td>
+                        <td class="hum">%s</td>
+                        <td><meter class="bar-temp" min="0" max="50"></meter></td>
+                        <td><meter class="bar-hum" min="0" max="100"></meter></td>
+                    </tr>
+                    <!-- fila 9 -->
+                    <tr>
+                        <td>9</td>
+                        <td class="temp">%s</td>
+                        <td class="hum">%s</td>
+                        <td><meter class="bar-temp" min="0" max="50"></meter></td>
+                        <td><meter class="bar-hum" min="0" max="100"></meter></td>
+                    </tr>
+                    <!-- fila 10 -->
+                    <tr>
+                        <td>10</td>
+                        <td class="temp">%s</td>
+                        <td class="hum">%s</td>
+                        <td><meter class="bar-temp" min="0" max="50"></meter></td>
+                        <td><meter class="bar-hum" min="0" max="100"></meter></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="logo-section">
+                <img src="#" alt="">
+                <button class="donate-btn">DONATE NOW ↗</button>
+            </div>
+            <div class="footer-section">
+                <h2>Take Action</h2>
+                <hr>
+                <ul>
+                    <li><a href="#"></a>Oportunities</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Learn</h2>
+                <hr>
+                <ul>
+                    <li><a href="#"></a>Trailheads & Maps</li>
+                    <li><a href="#"></a>History</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>ESP32</h2>
+                <hr>
+                <ul>
+                    <li><a href="#"></a>ESP32</li>
+                    <li><a href="#"></a>EXPRESSIF</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-botom">
+            <p>@2025 UABC</p>
+            <p>IC</p>
+        </div>
+    </footer>
+    <script>
+        (() => {
+            const MIN = 18, MAX = 27;
+            const banner = document.getElementById('statusBanner');
+            function updateBanner() {
+                //tomamos la cadena tal cual la puso el servidor
+                const tempText = document.querySelector('.Nodo1 strong').innerText || '0';
+                const t = parseFloat(tempText);
+
+                let cls, msg;
+                if (t > MAX) {
+                    cls = 'high';
+                    msg = `🚨 Alerta: temperatura ALTA: ${tempText} °C`;
+                }
+                else if (t < MIN) {
+                    cls = 'low';
+                    msg = `❄️ Alerta: temperatura BAJA: ${tempText} °C`;
+                }
+                else {
+                    cls = 'normal';
+                    msg = `👍 Temperatura normal: ${tempText} °C`;
+                }
+
+                banner.className = cls;
+                banner.textContent = msg;
+            }
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.history-table tbody tr').forEach(r => {
+                    const t = parseFloat(r.querySelector('.temp').innerText) || 0;
+                    const h = parseFloat(r.querySelector('.hum').innerText) || 0;
+                    r.querySelector('.bar-temp').value = t;
+                    r.querySelector('.bar-hum').value = h;
+                });
+                updateBanner();
+                setInterval(() => {
+                    updateBanner();
+                    fetch('/').then(() => location.reload());
+                }, 3000);
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
