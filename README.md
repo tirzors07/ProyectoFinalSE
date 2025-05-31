@@ -1,2 +1,2 @@
 # ProyectoFinalSE
-Este repositorio contiene los archivos para la red de sensores, AP+STA
+Proyecto Final (SE). Monitoreo y Control de Temperatura en Cuartos de Servidores
